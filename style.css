@@ -29,22 +29,32 @@ h1 {
 
 p {
     font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1;
+    margin-bottom: 0px;
     max-width: 600px;
     text-align: center; /* Center paragraph text */
 }
 
 a {
-    color: #00a0e9; /* Light blue link color (adjust as needed) */
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box; /* Include border in width */
 }
 
 a:hover {
-    color: #007bff; /* Slightly darker blue on hover */
-    text-decoration: underline;
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+    border-color: #000; /* Black border on hover */
 }
 
 /* Responsive adjustments (optional) */
