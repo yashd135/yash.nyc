@@ -1,38 +1,61 @@
 body {
-    font-family: sans-serif; /* Choose a font */
-    margin: 0; /* Remove default margins */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light background color */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure footer sticks to bottom */
+    min-height: 100vh;
+    align-items: center; /* Center horizontally */
 }
 
-header {
-    background-color: #333; /* Darker header background */
-    color: white;
-    padding: 20px;
-    text-align: center;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 #content {
-    padding: 20px;
-    flex: 1; /* Allow content to take up available space */
+    padding: 40px;
+    flex: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content vertically */
+    width: 100%; /* Content takes full width */
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-align: center; /* Center paragraph text */
 }
 
 a {
-    color: #007bff; /* Blue link color */
+    color: #00a0e9; /* Light blue link color (adjust as needed) */
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #007bff; /* Slightly darker blue on hover */
     text-decoration: underline;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    #content {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
