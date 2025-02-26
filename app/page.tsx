@@ -12,14 +12,14 @@ export default function Home() {
       company: "Amazon",
       period: "2022 - Present",
       description: "",
-      logo: "/amazon-logo.jpg?w=80&q=75",
+      logo: "/amazon-logo.jpg",
     },
     {
       title: "Full Stack Software Engineer",
       company: "American Express",
       period: "2019 - 2022",
       description: "",
-      logo: "/american-express-logo.png?w=80&q=75",
+      logo: "/american-express-logo.png",
     },
   ]
 
@@ -33,7 +33,7 @@ export default function Home() {
       >
         <h1 className="text-4xl font-bold mb-6">Hi, I'm Yash</h1>
         <Image
-          src="/profile-pic.jpg?w=200&q=90"
+          src="/profile-pic.jpg"
           alt="Your Name"
           width={200}
           height={200}

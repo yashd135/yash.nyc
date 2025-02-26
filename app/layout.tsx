@@ -18,13 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full dark">
-      <head>
-        <link
-          rel="preload"
-          href="/profile-pic.jpg"
-          as="image"
-        />
-      </head>
       <body className={`${inter.className} min-h-full flex flex-col bg-gray-900 text-white`}>
         <header className="bg-black text-white">
           <nav className="container mx-auto px-6 py-3">
