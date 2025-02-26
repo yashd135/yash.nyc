@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FileText, LinkedinIcon, Mail } from "lucide-react"
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 export default function Home() {
   const experiences = [
@@ -23,6 +24,14 @@ export default function Home() {
     },
   ]
 
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+
+  useEffect(() => {
+    // Set a timeout to ensure UI feels responsive
+    const timer = setTimeout(() => setImagesLoaded(true), 300)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="flex flex-col items-center">
       <motion.div
@@ -40,6 +49,9 @@ export default function Home() {
           className="rounded-full mb-4"
           priority
         />
+        {!imagesLoaded && (
+          <div className="animate-pulse bg-gray-700 rounded-full w-[200px] h-[200px]"></div>
+        )}
         <p className="text-xl mb-8 max-w-2xl">
           Based in New York City. I write code, take pictures, ski, play tennis, and much more.
         </p>
@@ -116,11 +128,12 @@ export default function Home() {
                   <p className="text-gray-400">{exp.period}</p>
                 </div>
                 <Image
-                  src={exp.logo || "/placeholder.svg"}
+                  src={exp.logo}
                   alt={`${exp.company} logo`}
                   width={80}
                   height={80}
                   className="rounded-full border-2 border-gray-700 ml-4"
+                  loading="lazy"
                 />
               </div>
               <p className="mt-4">{exp.description}</p>
