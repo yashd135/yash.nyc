@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Link from "next/link"
-import { GoogleTagManager, GoogleTagManagerNoScript } from "@components/Analytics"
+import { GoogleAnalytics } from "@components/Analytics"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,10 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full dark">
       <head>
-        <GoogleTagManager />
+        <GoogleAnalytics />
       </head>
       <body className={`${inter.className} min-h-full flex flex-col bg-gray-900 text-white`}>
-        <GoogleTagManagerNoScript />
         <header className="bg-black text-white">
           <nav className="container mx-auto px-6 py-3">
             <ul className="flex justify-center items-center space-x-2">
