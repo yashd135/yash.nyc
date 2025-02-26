@@ -1,8 +1,8 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { Mail } from "lucide-react"
+import { PhotoGallery } from "@components/PhotoGallery"
 
 export default function Photography() {
   const photos = [
@@ -35,34 +35,7 @@ export default function Photography() {
         </a>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full px-0 md:px-4 max-w-7xl">
-        {photos.map((photo, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] w-full">
-              <Image 
-                src={photo.src} 
-                alt={photo.alt} 
-                width={800}
-                height={600}
-                className="w-full h-full object-cover rounded-lg"
-                priority
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,..."
-              />
-            </div>
-            {photo.caption && (
-              <p className="mt-2 text-center text-gray-400 text-sm px-4">{photo.caption}</p>
-            )}
-          </motion.div>
-        ))}
-      </div>
+      <PhotoGallery photos={photos} />
     </div>
   )
 }
