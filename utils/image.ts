@@ -2,6 +2,9 @@
  * Image utilities for optimal loading and display
  */
 
+import { ImageProps, StaticImageData } from "next/image";
+import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
+
 // Default placeholder blur data URL
 export const DEFAULT_BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFdwI2QOQvhA==';
 

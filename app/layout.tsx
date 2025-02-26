@@ -5,7 +5,7 @@ import "./globals.css"
 import { GoogleAnalytics } from "@components/Analytics"
 import { PersonJsonLd } from "./JsonLd"
 import { CanonicalLink } from "@components/CanonicalLink"
-import { Header } from "@/components/organisms/Header"
+import { Header } from "@/components/Header"
 
 const inter = Inter({ subsets: ["latin"] })
 
