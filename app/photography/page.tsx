@@ -19,12 +19,12 @@ export default function Photography() {
   ]
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       <motion.div 
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
-        className="text-center mb-12"
+        className="text-center mb-12 w-full px-4"
       >
         <h1 className="text-4xl font-bold mb-4">Photography Portfolio</h1>
         <p className="text-xl text-gray-300 mb-6">Here's a selection of some of my work, interested?</p>
@@ -37,7 +37,7 @@ export default function Photography() {
         </a>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full px-0 md:px-4 max-w-7xl">
         {photos.map((photo, index) => (
           <motion.div
             key={index}
@@ -47,17 +47,18 @@ export default function Photography() {
             viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col"
           >
-            <div className="relative aspect-[4/3]">
+            <div className="relative aspect-[4/3] w-full">
               <Image 
                 src={photo.src} 
                 alt={photo.alt} 
-                width={400}
-                height={300}
-                className="w-full h-full object-cover rounded-lg" 
+                width={800}
+                height={600}
+                className="w-full h-full object-cover rounded-none md:rounded-lg" 
+                priority
               />
             </div>
             {photo.caption && (
-              <p className="mt-2 text-center text-gray-400 text-sm">{photo.caption}</p>
+              <p className="mt-2 text-center text-gray-400 text-sm px-4">{photo.caption}</p>
             )}
           </motion.div>
         ))}
