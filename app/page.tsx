@@ -119,24 +119,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-gray-800 p-6 rounded-lg"
+              className="bg-gray-800 p-6 rounded-lg relative"
             >
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-semibold">{exp.title}</h3>
-                  <h4 className="text-xl text-gray-300 mb-2">{exp.company}</h4>
-                  <p className="text-gray-400">{exp.period}</p>
-                </div>
+              <div className="pr-16 md:pr-20">
+                <h3 className="text-xl md:text-2xl font-semibold break-words">{exp.title}</h3>
+                <h4 className="text-lg md:text-xl text-gray-300 mb-2">{exp.company}</h4>
+                <p className="text-gray-400">{exp.period}</p>
+                {exp.description && <p className="mt-4">{exp.description}</p>}
+              </div>
+              
+              <div className="absolute top-6 right-6">
                 <Image
                   src={exp.logo}
                   alt={`${exp.company} logo`}
-                  width={80}
-                  height={80}
-                  className="rounded-full border-2 border-gray-700 ml-4"
+                  width={60}
+                  height={60}
+                  className="rounded-full border-2 border-gray-700 w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
                   loading="lazy"
                 />
               </div>
-              <p className="mt-4">{exp.description}</p>
             </motion.div>
           ))}
         </div>

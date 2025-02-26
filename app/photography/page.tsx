@@ -24,13 +24,11 @@ export default function Photography() {
         initial={{ opacity: 0, y: 20 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
-        className="text-center mb-12 w-full px-4"
+        className="text-center mb-8 w-full px-0 md:px-4 max-w-7xl"
       >
-        <h1 className="text-4xl font-bold mb-4">Photography Portfolio</h1>
-        <p className="text-xl text-gray-300 mb-6">Here's a selection of some of my work, interested?</p>
         <a
           href="mailto:yashthetic@gmail.com"
-          className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+          className="flex items-center justify-center gap-2 bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors w-full md:w-auto md:px-6 md:inline-flex"
         >
           <Mail size={20} />
           <span>Contact for Bookings</span>
@@ -53,8 +51,10 @@ export default function Photography() {
                 alt={photo.alt} 
                 width={800}
                 height={600}
-                className="w-full h-full object-cover rounded-none md:rounded-lg" 
+                className="w-full h-full object-cover rounded-lg"
                 priority
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,..."
               />
             </div>
             {photo.caption && (
