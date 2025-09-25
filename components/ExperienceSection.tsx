@@ -15,9 +15,15 @@ interface Experience {
 export function ExperienceSection() {
   const experiences: Experience[] = [
     {
+      title: "Senior Software Engineer",
+      company: "Altruist",
+      period: "2025 - Present",
+      logo: "/altruist-logo.png",
+    },
+    {
       title: "Backend Software Engineer",
       company: "Amazon",
-      period: "2022 - Present",
+      period: "2022 - 2025",
       logo: "/amazon-logo.jpg",
     },
     {
