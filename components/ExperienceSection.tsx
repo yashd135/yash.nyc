@@ -18,7 +18,7 @@ export function ExperienceSection() {
       title: "Senior Software Engineer",
       company: "Altruist",
       period: "2025 - Present",
-      logo: "/altruist_logo.png",
+      logo: "/altruist_logo.jpg",
     },
     {
       title: "Backend Software Engineer",
